@@ -1,0 +1,162 @@
+This directory contains instructions on how to setup Intersystems Cache in a
+Linux machine (Red Hat Enterprise Linux RHEL).
+
+The overall process involves:
+
+0) Create the cache user with the script
+
+        ./createCacheUser.sh
+
+1) Download from Intersystems the file
+
+    cache-2008.2.5.951-lnxrh5x86_64.tar.gz
+
+   put it in the ~/Downloads  directory.
+
+2) Create a ~/tmp directory:    mkdir ~/tmp
+
+3) Enter the ~/tmp direcotry:   cd    ~/tmp
+
+4) Expand the cache  tar.gz file
+
+    tar -xzf ~/Downloads/cache-2008.2.5.951-lnxrh5x86_64.tar.gz
+
+5) Run the "cinstall" script
+
+             sudo ./cinstall
+
+6) It will ask you
+
+         1) Red Hat Enterprise Linux 5 (x64)
+
+         Enter the number for your system:
+
+   Reply with "1" and ENTER
+
+
+7) It will ask:
+
+         Enter instance name <CACHE>:
+
+   Reply with ENTER to accept the default
+
+
+8) It will ask:
+
+      Enter a destination directory for the new instance.
+      Directory:
+
+   Reply with
+
+                  /opt/cachesys/
+
+
+   it will answer that the directory does not exist,
+   and
+
+           Do you want to create it <Yes>?
+
+   Hit ENTER to accept the default
+
+
+9)  Then it will ask for the installation type
+
+        Select installation type.
+        1) Development - Install Cache server and all language bindings
+        2) Server only - Install Cache server
+        3) Custom - Choose components to install
+
+    Select option 1 and hit ENTER
+
+
+10) It will ask whether to install Unicode.
+
+        Do you want to install Cache Unicode support <No>
+
+    Accept the default "No" option and hit ENTER.
+
+
+11) Then it asks about the security level
+
+      How restrictive do you want the initial Security settings to be?
+      "Minimal" is the least restrictive, "Locked Down" is the most secure.
+          1) Minimal
+          2) Normal
+          3) Locked Down
+      Initial Security settings <1>?
+
+   Accept the default "1" option and hit ENTER.
+
+
+12)  Specify the group that can start and stop the instance:
+
+        What group should be allowed to start and stop
+          this instance?
+
+     Answer with
+
+                    root
+
+     and hit ENTER
+
+
+13) The installer will ask about the license with:
+
+        Cache did not detect a license key
+        in directory /opt/cachesys/mgr.
+        Do you want to enter a license key <No>?
+
+    Reply with "No" at this point and hit ENTER.
+
+
+14) The installer will present the summary
+    of the options that you have selected and will ask
+    for confirmation to proceed with the installation.
+
+
+      Please review the installation options:
+      ------------------------------------------------------------------
+      Instance name: CACHE
+      Destination directory: /opt/cachesys
+      Cache version to install: 2008.2.5.951.0
+      Installation type: Development
+      Unicode support: N
+      Initial Security settings: Minimal
+      User who owns instance: root
+      Group allowed to start and stop instance: root
+      Effective group for Cache processes: cacheusr
+      Effective user for Cache SuperServer: cacheusr
+      SuperServer port: 1972
+      WebServer port: 57772
+      CSP Gateway: using built-in web server
+      Client components: all
+      ------------------------------------------------------------------
+
+      Do you want to proceed with the installation <Yes>?
+
+
+   Reply with "Yes" and hit ENTER
+
+
+15)  At this point the installer will initiate the installation
+     process.
+
+     You will see the message:
+
+                  Starting installation...
+
+     followed by many other messages and finishing with:
+
+               Setting to InterSystems defaults ... done.
+
+
+                You can point your browser to http://localhost:57772/csp/sys/UtilHome.csp
+                to access the system management portal.
+
+                Installation completed successfully
+
+
+16)  This concludes the process for installing Cache.
+
+
+

@@ -15,13 +15,13 @@ The overall process involves:
 
 2) Create a ~/tmp directory:    mkdir ~/tmp
 
-3) Enter the ~/tmp direcotry:   cd    ~/tmp
+3) Enter the ~/tmp directory:   cd    ~/tmp
 
 4) Expand the cache  tar.gz file
 
     tar -xzf ~/Downloads/cache-2008.2.5.951-lnxrh5x86_64.tar.gz
 
-5) Run the "cinstall" script
+5) Run the "cinstall" script with sudo:
 
              sudo ./cinstall
 

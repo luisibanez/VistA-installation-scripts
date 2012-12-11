@@ -16,8 +16,9 @@ if using GTM:
 
 if using Cache:
 
-      1) Cache/configureCache.sh
-      2) Cache/createCacheUser.sh
+      1) Follow Cache/HowToInstallCache.txt
+      2) Cache/configureCache.sh
+      3) Cache/createCacheUser.sh
 
 continue for any case (GTM or Cache):
 

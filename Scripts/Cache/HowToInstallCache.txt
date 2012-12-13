@@ -156,6 +156,19 @@ The overall process involves:
                 Installation completed successfully
 
 
+15)  Fix a version issue with libexpat by creating a symbolic link
+
+       ln  -s  /lib64/libexpat.so.1.5.2 /lib64/libexpat.so.0
+
+     Once the link has been created, the files should look like:
+
+                 cd /lib64
+                 ll libexpat.so.*
+
+       lrwxrwxrwx 1 root root libexpat.so.0 -> libexpat.so.1.5.2
+       lrwxrwxrwx 1 root root libexpat.so.1 -> libexpat.so.1.5.2
+
+
 16)  This concludes the process for installing Cache.
 
 

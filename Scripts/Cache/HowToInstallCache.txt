@@ -159,4 +159,26 @@ The overall process involves:
 16)  This concludes the process for installing Cache.
 
 
+17)  This additional step is not a recommended setting,
+     and it is intended only as a convenience for settings
+     of instances to be used for informal education and
+     testing.
+
+     By default, in order to stop and start the VistA
+     instance, a user will have to use the following
+     command with sudo:
+
+                 sudo ccontrol start CACHE
+                 sudo ccontrol stop  CACHE  quietly
+
+     Since sometimes this is needed from testing scripts,
+     it is convenient to avoid having to use sudo for this
+     command. The following command give all users the
+     permission to start and stop the database. Again, this
+     is not a recommended setting at all for a production
+     deployment.
+
+            sudo chmod o+x /opt/cachesys/bin/cstart
+            sudo chmod o+x /opt/cachesys/bin/cstop
+
 

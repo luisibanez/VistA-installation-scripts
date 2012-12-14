@@ -195,3 +195,13 @@ The overall process involves:
             sudo chmod o+x /opt/cachesys/bin/cstop
 
 
+18)  Install a service to stop / start cache when shutting down
+     and rebooting the computere.
+
+     Copy the "cache" file from this directory into
+
+                  /etc/init.d/cache
+
+     and ensure that the file has executable permissions, and
+     ownership just as the other files in that directory.
+
